@@ -1,5 +1,5 @@
 {
-  "name": "armor-test-support",
+  "name": "armor-test-helpers",
   "description": "A collection of test utilities used across Armor packages",
   "version": "1.0.0",
   "author": "ait-software",
