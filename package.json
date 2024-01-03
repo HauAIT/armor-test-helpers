@@ -1,0 +1,62 @@
+{
+  "name": "armor-test-support",
+  "description": "A collection of test utilities used across Armor packages",
+  "version": "1.0.0",
+  "author": "ait-software",
+  "engines": [
+    "node"
+  ],
+  "main": "./build/index.js",
+  "bin": {
+    "android-emu-travis-pre": "./bin/android-emu-travis-pre.sh",
+    "android-emu-travis-post": "./bin/android-emu-travis-post.sh"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "index.js",
+    "bin",
+    "lib",
+    "build/index.js",
+    "build/lib"
+  ],
+  "dependencies": {
+    "@babel/runtime": "^7.0.0",
+    "armor-support": "github:ait-software/armor-support",
+    "bluebird": "^3.5.1",
+    "lodash": "^4.17.5",
+    "loud-rejection": "^2.0.0",
+    "sinon": "^13.0.0",
+    "source-map-support": "^0.5.9"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules && rm -f package-lock.json && npm install",
+    "prepare": "gulp prepublish",
+    "test": "gulp once",
+    "watch": "gulp watch",
+    "e2e-test": "gulp transpile && mocha build/test/e2e/ -t 10000000",
+    "build": "gulp transpile",
+    "coverage": "gulp coveralls",
+    "lint": "gulp lint",
+    "lint:fix": "gulp lint --fix",
+    "mocha": "mocha",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+  },
+  "pre-commit": [
+    "precommit-msg",
+    "test"
+  ],
+  "devDependencies": {
+    "armor-gulp-plugins": "github:ait-software/armor-gulp-plugins",
+    "chai": "^4.1.2",
+    "colors": "^1.1.2",
+    "eslint-config-armor": "github:ait-software/eslint-config-armor",
+    "gulp": "^4.0.0",
+    "mocha": "^9.0.0",
+    "pre-commit": "^1.2.2"
+  },
+  "greenkeeper": {
+    "ignore": []
+  }
+}
