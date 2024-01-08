@@ -1,7 +1,7 @@
 {
   "name": "armor-test-helpers",
   "description": "A collection of test utilities used across Armor packages",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "ait-software",
   "engines": [
     "node"
@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "@babel/runtime": "^7.0.0",
-    "armor-support": "lastest",
+    "armor-support": "*",
     "bluebird": "^3.5.1",
     "lodash": "^4.17.5",
     "loud-rejection": "^2.0.0",
@@ -48,10 +48,10 @@
     "test"
   ],
   "devDependencies": {
-    "armor-gulp-plugins": "lastest",
+    "armor-gulp-plugins": "*",
     "chai": "^4.1.2",
     "colors": "^1.1.2",
-    "eslint-config-armor": "lastest",
+    "eslint-config-armor": "*",
     "gulp": "^4.0.0",
     "mocha": "^9.0.0",
     "pre-commit": "^1.2.2"
