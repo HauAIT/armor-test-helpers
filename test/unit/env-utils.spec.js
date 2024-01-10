@@ -1,14 +1,11 @@
-// transpile:mocha
-
-import { stubEnv } from '..';
-import chai from 'chai';
-
-
-chai.should();
+import {stubEnv} from '../../build/lib/index';
+import chai from 'chai'
 const expect = chai.expect;
+const should = chai.should();
 
 describe('env-utils', function () {
   describe('stubEnv', function () {
+    should.exist(stubEnv);
     stubEnv();
 
     it('setting env variable', function () {

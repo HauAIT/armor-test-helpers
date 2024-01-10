@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@tsconfig/node14/tsconfig.json",
+  "ts-node": {
+    "transpileOnly": true
+  },
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "resolveJsonModule": true,
+    "strictNullChecks": true,
+    "stripInternal": true,
+    "sourceMap": true,
+    "removeComments": false,
+    "lib": ["es2020", "ES2021.WeakRef"],
+    "outDir": "build",
+    "checkJs": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "paths": {
+      "armor-types": ["./node_modules/armor-types"],
+      "armor-support": ["./node_modules/support"]
+    },
+    "types": ["mocha", "chai", "sinon", "sinon-chai", "chai-as-promised"]
+  },
+  "include": ["lib"],
+  "references": [{"path": "./node_modules/armor-types"}, {"path": "./node_modules/armor-support"}]
+}

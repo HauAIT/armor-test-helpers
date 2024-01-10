@@ -1,17 +1,12 @@
-// transpile:mocha
+import {fakeTime} from '../../lib';
 
-import { fakeTime } from '..';
-
-import chai from 'chai';
 import sinon from 'sinon';
 import B from 'bluebird';
 
-chai.should();
-
-function doSomething () {
+function doSomething() {
   return new B.Promise((resolve) => {
     let ret = '';
-    function appendOneByOne () {
+    function appendOneByOne() {
       if (ret.length >= 10) {
         return resolve(ret);
       }
