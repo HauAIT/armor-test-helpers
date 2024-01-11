@@ -1,6 +1,6 @@
 {
   "name": "armor-test-helpers",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A collection of test utilities used across Armor packages",
   "author": "ait-software",
   "types": "./build/lib/index.d.ts",
